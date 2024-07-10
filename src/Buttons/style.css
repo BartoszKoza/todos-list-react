@@ -1,0 +1,16 @@
+.list_newButtons{
+    border: none;
+    background: transparent;
+    color: teal;
+    padding: 0px 10px;
+}
+
+.list_newButtons:hover{
+    cursor: pointer;
+    color: hsl(180, 100%, 30%);
+    transition: 0.3s;
+}
+
+.list_newButtons:disabled{
+    color: hsla(0, 0%, 50%, 0.438);
+}
