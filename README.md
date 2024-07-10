@@ -2,7 +2,10 @@
 
 I created a simple to-do list application using HTML, CSS, JavaScript, and React.js. The application allows users to add, delete, and mark tasks as completed, offering a user-friendly and intuitive interface.
 
+https://bartoszkoza.github.io/todos-list-react/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 ![preview](/images/screen.png)
 
 ## Available Scripts
