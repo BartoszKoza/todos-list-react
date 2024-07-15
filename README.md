@@ -6,7 +6,11 @@ https://bartoszkoza.github.io/todos-list-react/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+<<<<<<< HEAD
 ![preview](./public/images/screen.png)
+=======
+![preview](todos-list-react/public/images/screen.png)
+>>>>>>> b761466c1878fa19ec9f6e3c0dd05c7d55425c17
 
 ## Available Scripts
 
