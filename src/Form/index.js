@@ -1,5 +1,5 @@
 import "./style.css";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const Form = ({addNewTask}) => {
   const [newTaskContent, setNewTaskContent] = useState("");
@@ -9,9 +9,17 @@ const Form = ({addNewTask}) => {
     addNewTask(newTaskContent.trim());
     setNewTaskContent("");
   };
+
+  const inputRef = useRef();
+
+  const focusInput = () => {
+    inputRef.current.focus();
+  };
+
   return (
     <form className="form flex" onSubmit={onFormSubmit}>
       <input
+        ref={inputRef}
         value={newTaskContent}
         type="text"
         placeholder="Co jest do zrobienia?"
@@ -20,7 +28,7 @@ const Form = ({addNewTask}) => {
         onChange={({ target }) => setNewTaskContent(target.value)}
         required
       />
-      <button className="addTaskButton flex__item">Dodaj zadanie</button>
+      <button onClick={focusInput} className="addTaskButton flex__item">Dodaj zadanie</button>
     </form>
   );
 };
