@@ -1,7 +1,7 @@
-import "./style.css";
 import { useState, useRef } from "react";
+import { AddTaskButton, Input, Structure } from "./styled";
 
-const Form = ({addNewTask}) => {
+const Form = ({ addNewTask }) => {
   const [newTaskContent, setNewTaskContent] = useState("");
 
   const onFormSubmit = (event) => {
@@ -17,19 +17,20 @@ const Form = ({addNewTask}) => {
   };
 
   return (
-    <form className="form flex" onSubmit={onFormSubmit}>
-      <input
+    <Structure onSubmit={onFormSubmit}>
+      <Input
         ref={inputRef}
         value={newTaskContent}
         type="text"
         placeholder="Co jest do zrobienia?"
-        className="flex__item flex__item--first"
         autofocus
         onChange={({ target }) => setNewTaskContent(target.value)}
         required
       />
-      <button onClick={focusInput} className="addTaskButton flex__item">Dodaj zadanie</button>
-    </form>
+      <AddTaskButton onClick={focusInput}>
+        Dodaj zadanie
+      </AddTaskButton>
+    </Structure>
   );
 };
 export default Form;
