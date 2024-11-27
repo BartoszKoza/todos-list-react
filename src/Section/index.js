@@ -1,4 +1,4 @@
-import { Header, TaskSection, TaskSectionHeader } from "./styled";
+import { BodyDivision, Header, TaskSection, TaskSectionHeader } from "./styled";
 
 const Section = ({ title, body, extraHeaderContent }) => (
   <TaskSection>
@@ -6,7 +6,7 @@ const Section = ({ title, body, extraHeaderContent }) => (
       <Header>{title}</Header>
       {extraHeaderContent}
     </TaskSectionHeader>
-    <div className="tasksSectionBody">{body}</div>
+    <BodyDivision>{body}</BodyDivision>
   </TaskSection>
 );
 

@@ -19,3 +19,5 @@ export const TaskSectionHeader = styled.header`
 export const Header = styled.h2`
   margin-left: 10px;
 `;
+
+export const BodyDivision = styled.div``;
