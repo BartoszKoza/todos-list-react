@@ -1,22 +1,22 @@
-import "./style.css";
+import { DivButton, Division } from "./styled";
 
 const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => (
-  <div className="buttons">
+  <Division>
     {tasks.length > 0 && (
       <>
-        <button onClick={toggleHideDone} className="buttons_button ">
+        <DivButton onClick={toggleHideDone}>
           {hideDone ? "Pokaż" : "Ukryj"} ukończone{" "}
-        </button>
-        <button
+        </DivButton>
+        <DivButton
           className="buttons_button"
           disabled={tasks.every(({ done }) => done)}
           onClick={setAllDone}
         >
           Ukończ wszystkie
-        </button>
+        </DivButton>
       </>
     )}
-  </div>
+  </Division>
 );
 
 export default Buttons;
