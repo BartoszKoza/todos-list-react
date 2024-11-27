@@ -13,28 +13,3 @@ html {
   background-color: #eee;
   font-family: sans-serif;
 }
-
-@media (max-width: 797px) {
-  .flex__item {
-    flex-basis: 100%;
-  }
-}
-
-@media (max-width: 797px) {
-  .list_sectionHeader {
-    grid-template-columns: 1fr;
-  }
-
-  .buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-  }
-
-  .buttons_button {
-    margin-bottom: 10px;
-  }
-}
