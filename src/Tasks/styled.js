@@ -44,7 +44,7 @@ export const Button = styled.button`
     css`
       background-color: hsl(120, 92%, 33%);
 
-      &hover {
+      &:hover {
         background-color: hsl(120, 92%, 45%);
       }
     `};
@@ -54,7 +54,7 @@ export const Button = styled.button`
     css`
       background-color: hsl(0, 100%, 50%);
 
-      &hover {
+      &:hover {
         background-color: hsl(0, 100%, 65%);
       }
     `};
