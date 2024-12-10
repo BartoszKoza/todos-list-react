@@ -27,9 +27,7 @@ const Form = ({ addNewTask }) => {
         onChange={({ target }) => setNewTaskContent(target.value)}
         required
       />
-      <AddTaskButton onClick={focusInput}>
-        Dodaj zadanie
-      </AddTaskButton>
+      <AddTaskButton onClick={focusInput}>Dodaj zadanie</AddTaskButton>
     </Structure>
   );
 };

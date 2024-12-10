@@ -9,7 +9,6 @@ export const Structure = styled.form`
     flex-direction: column;
     align-items: stretch;
   }
-
 `;
 
 export const Input = styled.input`
