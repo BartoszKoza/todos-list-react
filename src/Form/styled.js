@@ -32,6 +32,7 @@ export const AddTaskButton = styled.button`
   padding: 10px;
   transition: 1s;
   margin-left: 7px;
+  height: 40px;
 
   &:hover {
     background-color: hsl(180, 100%, 30%);
