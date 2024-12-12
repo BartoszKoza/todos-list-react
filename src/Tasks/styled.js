@@ -38,6 +38,7 @@ export const Button = styled.button`
   border: none;
   text-decoration: none;
   transition: 1s;
+  cursor: pointer;
 
   ${({ toggleDone }) =>
     toggleDone &&
