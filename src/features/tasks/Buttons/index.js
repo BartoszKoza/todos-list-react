@@ -1,20 +1,22 @@
 import { useDispatch, useSelector } from "react-redux";
 import { DivButton, Division } from "./styled";
-import { selectTasksState, toggleHideDone, setAllDone } from "../tasksSlice";
+import { selectTasksState, toggleHideDone, setAllDone, selectAreTasksEmpty, selectAllDone } from "../tasksSlice";
 
 const Buttons = () => {
   const {tasks, hideDone} = useSelector(selectTasksState);
+  const areTasksEmpty = useSelector(selectAreTasksEmpty);
+  const everyDone = useSelector(selectAllDone);
   const dispatch = useDispatch();
   return (
   <Division>
-    {tasks.length > 0 && (
+    {areTasksEmpty && (
       <>
         <DivButton onClick={()=>dispatch(toggleHideDone())}>
           {hideDone ? "Pokaż" : "Ukryj"} ukończone{" "}
         </DivButton>
         <DivButton
           className="buttons_button"
-          disabled={tasks.every(({ done }) => done)}
+          disabled = {everyDone}
           onClick={()=>dispatch(setAllDone())}
         >
           Ukończ wszystkie
