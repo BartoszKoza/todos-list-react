@@ -24,8 +24,8 @@ export const Item = styled.li`
 export const Content = styled.span`
   text-align: start;
   padding: 10px;
-  ${({ done }) =>
-    done &&
+  ${({ $done }) =>
+    $done &&
     css`
       text-decoration: line-through;
     `};
