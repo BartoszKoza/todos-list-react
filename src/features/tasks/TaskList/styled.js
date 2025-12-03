@@ -14,8 +14,8 @@ export const Item = styled.li`
   border-bottom: 2px solid #eee;
   text-align: start;
 
-  ${({ hidden }) =>
-    hidden &&
+  ${({ $hidden }) =>
+    $hidden &&
     css`
       display: none;
     `};
