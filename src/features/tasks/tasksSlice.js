@@ -45,6 +45,21 @@ export const {
 } = tasksSlice.actions;
 export const selectTasksState = (state) => state.tasks;
 export const selectAreTasksEmpty = (state) => state.tasks.tasks.length !== 0;
+
 export const selectAllDone = (state) =>
   state.tasks.tasks.every((task) => task.done);
+
+export const getTaskById = (state, taskId) =>
+  selectTasksState(state).tasks.find(({ id }) => id === taskId);
+
+export const selectTasksByQuery = (state, query) => {
+  const tasks = selectTasksState(state).tasks ?? [];
+  if (!query || query.trim() === "") {
+    return tasks;
+  }
+  return tasks.filter(({ content }) =>
+    content.toUpperCase().includes(query.trim().toUpperCase())
+  );
+};
+
 export default tasksSlice.reducer;
