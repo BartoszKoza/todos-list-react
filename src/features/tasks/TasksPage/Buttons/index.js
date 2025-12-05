@@ -9,9 +9,7 @@ const Buttons = () => {
   const dispatch = useDispatch();
   return (
   <Division>
-    <DivButton onClick={()=>dispatch(fetchExampleTasks())}>
-      Pobierz przykładowe zadania
-    </DivButton>
+    
     {areTasksEmpty && (
       <>
         <DivButton onClick={()=>dispatch(toggleHideDone())}>
