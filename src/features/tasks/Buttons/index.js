@@ -3,7 +3,7 @@ import { DivButton, Division } from "./styled";
 import { selectTasksState, toggleHideDone, setAllDone, selectAreTasksEmpty, selectAllDone, fetchExampleTasks } from "../tasksSlice";
 
 const Buttons = () => {
-  const {tasks, hideDone} = useSelector(selectTasksState);
+  const {hideDone} = useSelector(selectTasksState);
   const areTasksEmpty = useSelector(selectAreTasksEmpty);
   const everyDone = useSelector(selectAllDone);
   const dispatch = useDispatch();
