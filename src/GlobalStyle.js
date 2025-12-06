@@ -11,8 +11,8 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
 
-  .body {
-    max-width: 800px;
+  body {
+  
     margin: auto;
     background-color: #eee;
     font-family: sans-serif;

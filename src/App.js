@@ -6,23 +6,27 @@ import {
   Switch,
 } from "react-router-dom/cjs/react-router-dom.min";
 import AuthorPage from "./features/Author/AuthorPage";
-import { StyledNavLink } from "./styled";
+import {
+  StyledNavLink,
+  NavigationItem,
+  NavigationList,
+  Navigation,
+  Main,
+} from "./styled";
 
 export const App = () => (
   <HashRouter>
-    <nav>
-      <ul>
-        <li>
-          <StyledNavLink to="/zadania">
-            Zadania
-          </StyledNavLink>
-        </li>
-        <li>
-          <StyledNavLink to="/autor">
-            O autorze
-          </StyledNavLink>
-        </li>
-      </ul>
+    <Navigation>
+      <NavigationList>
+        <NavigationItem>
+          <StyledNavLink to="/zadania">Zadania</StyledNavLink>
+        </NavigationItem>
+        <NavigationItem>
+          <StyledNavLink to="/autor">O autorze</StyledNavLink>
+        </NavigationItem>
+      </NavigationList>
+    </Navigation>
+    <Main>
       <Switch>
         <Route path="/zadania/:id">
           <TaskPage />
@@ -34,6 +38,6 @@ export const App = () => (
           <AuthorPage />
         </Route>
       </Switch>
-    </nav>
+    </Main>
   </HashRouter>
 );

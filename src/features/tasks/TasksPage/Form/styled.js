@@ -20,7 +20,7 @@ export const Input = styled.input`
   @media (max-width: 797px) {
     margin-bottom: 10px;
     width: 100%;
-    height: 10px;
+    
     flex-basis: 40px;
   }
 `;
